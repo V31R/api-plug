@@ -10,15 +10,11 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 
+app = Flask(__name__)
+app.config.from_object(__name__)
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    app.run()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
